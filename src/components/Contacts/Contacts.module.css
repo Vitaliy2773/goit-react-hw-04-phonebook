@@ -1,0 +1,95 @@
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.form {
+  margin: 20px auto;
+  width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+label {
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+.buttonAddContact {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.buttonAddContact:hover {
+  background-color: brown;
+}
+
+.buttonAddContact:active {
+  background-color: brown;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border: 1px solid grey;
+  border-radius: 4px;
+  background-color: gainsboro;
+  font-size: 16px;
+}
+
+.btnDelete {
+  padding: 5px 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btnDelete:hover {
+  background-color: #e33e3f;
+}
+
+.btnDelete:active {
+  background-color: #c83335;
+}
+
+.contactsList {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 0;
+}

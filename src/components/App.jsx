@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { nanoid } from 'nanoid';
 import ContactForm from './Contacts/ContactForm';
 import Filter from './Contacts/Filter';
@@ -9,22 +9,18 @@ import { loadContacts, saveContacts } from '../local';
 export default function App() {
   const [contacts, setContacts] = useState([]);
   const [filter, setFilter] = useState('');
-  const prevContactsRef = useRef();
 
   function changeFilter(e) {
     setFilter(e.currentTarget.value);
   }
 
   useEffect(() => {
-    const loadedContacts = loadContacts(contacts);
-    setContacts(loadedContacts);
+    const loadedContacts = loadContacts();
+    setContacts(loadedContacts || []);
   }, []);
 
   useEffect(() => {
-    if (prevContactsRef.current !== contacts) {
-      saveContacts(contacts);
-    }
-    prevContactsRef.current = contacts;
+    saveContacts(contacts);
   }, [contacts]);
 
   function handleSubmit(contactName, contactNumber) {
